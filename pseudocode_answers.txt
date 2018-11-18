@@ -1,0 +1,56 @@
+//Create a function that takes two numbers and prints out the greater number.
+//Answer:
+
+INPUT first number
+INPUT second number
+IF first number is greater than second number
+  PRINT first number
+ELSE
+  PRINT second number
+END IF
+
+//Create a function that prints out the numbers from 1 to 100.
+//Answer:
+
+INPUT total to 0
+INPUT number to 1
+WHILE the total is less than 100
+  ADD number to total
+  INPUT a number
+END WHILE
+RETURN total
+
+
+//Create a function that searches for a specific entry in a phonebook.
+//Answer:
+
+
+INPUT a query
+FOR each entry in the list
+  IF entry in the list is equal to query
+    PRINT entry in the list
+  ELSE
+    PRINT error message
+  END IF
+END FOR     
+
+
+//Using the pseudocode you wrote for the previous question, implement it in any computer language of your choice.
+//Answer using JavaScript:
+
+var phoneBook = [
+  //contains all numbers as strings
+];
+
+var findNumber = function(arr) {
+  var entry = '555-555-5555';
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === entry) {
+      return arr[i];
+    } else {
+      return "No entry found."
+    }
+  }
+}
+
+findNumber(phoneBook);
