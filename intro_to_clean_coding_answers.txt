@@ -56,6 +56,10 @@ FUNCTION calcPercent(sum, total)
  PRINT percentage
 END FUNCTION
 
+ANSWER://////////////////////////////////////////////
+I consider this to be clean code, because it is performing a single calculation based on a condition. 
+I can't see how that could be refactred to be simpler.
+
 5.Using pseudocode, refactor the code for the following examples using the principles 
 you have learned in this checkpoint.
 
@@ -173,7 +177,7 @@ If it is a perfect square, return the square root, otherwise return the sum.
 
 ANSWER://////////////////////////////////////////////
 
-var arr = [10,1,4,6,1,1,2];
+var numbers = [10,1,4,6,1,1,2];
 
 var getRoot = function(arr){
 
@@ -187,4 +191,28 @@ var getRoot = function(arr){
   }
 }
 
-getRoot(arr);
+getRoot(numbers);
+
+7. Duplicate Given an array of integers, find out whether the array contains any duplicate elements. The function should return true if any value 
+appears at least twice in the array, and false if every element is distinct.
+
+ANSWER://////////////////////////////////////////////
+
+var numbers = [10,1,4,6,2, 1];
+
+var checkForDuplicates = function(arr) {
+  var result = false;
+  
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 1; j < arr.length; j++) {
+      if (i !== j) {
+        if (arr[i] === arr[j]) {
+          result = true;
+        }
+      }
+    }
+  } 
+  return result;
+}
+
+checkForDuplicates(numbers);
