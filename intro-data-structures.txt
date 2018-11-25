@@ -1,0 +1,66 @@
+1. A line of people at an amusement park ride.
+
+  • The line is composed of members, represented as strings.
+  • There is a front to the line, as well as a back.
+  • When someone enters the line, place them at the end.
+  • People may leave the line whenever they see fit, and those behind them take their place.
+
+  Given the above real-world information, use an array data structure to code the following solution.
+  a) Use an array input: ["Vivian", "Ava", "Josh", "Patrick", "Mike"]
+
+    A:
+    INPUT peopleInLine to "Vivian", "Ava", "Josh", "Patrick", "Mike"
+
+  b) Insert a new person, "Mary" at the end of the line. In other words, you should insert Mary after Mike.
+
+    A:
+    FUNCTION addPerson (list)
+      INIT person
+      PUSH person to end of the list
+    END FUNCTION
+
+  c) Find a person in line named "Josh." This function should return the position 
+  of 2 in the array, (recall that arrays are 0-based).  
+
+    A:
+    FUNCTION findIndex (list, person)
+      FOR each entry in the list
+        IF entry in the list equals person
+          PRINT entry index
+        END IF
+      END FOR    
+    END FUNCTION
+
+  d) Find a person in line named "Emily." What should your function return if it 
+  does not find the item in the array?
+
+    A:
+    FUNCTION findPerson (list, person)
+      FOR each entry in the list
+        IF entry in the list equals person
+          PRINT person
+        ELSE
+          PRINT error message
+        END IF
+      END FOR    
+    END FUNCTION
+
+  e) What if Ava wants to allow a friend, "Melissa", to cut in line in front of her? 
+  How would you code this so Melissa appears before Ava?  
+
+    A:
+    FUNCTION insertPerson (list, person, personInLine)
+      IF personInLine is true  
+        SET person to personInLine index - 1 in list
+      END IF
+    END FUNCTION
+
+
+  f) If Patrick wants to leave the line, how would you delete him from the array?
+
+    A:
+    FUNCTION deletePerson (list, person)
+      IF person in list
+        DELETE person
+      END IF
+    END FUNCTION
