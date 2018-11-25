@@ -1,0 +1,124 @@
+What are some pros and cons of using linked lists instead of arrays?
+  A:
+  Using linked lists over arrays have a couple pros and cons. First, linked lists use nodes 
+  which are memory independent, meaning data can be stored anywhere memory is available. In contrast 
+  arrays require memory to be alotted to them, which can be expensive for operations. So linked  lists oare optimal 
+  for very large lists over arrays. Linked lists however, are generated dynamically from their head, meaning accessing 
+  individual nodes in the list can be ineffecient due to the fact that they must be accessed in order. In contrast
+  arrays can be accessed using individual indexes, making them easier to traverse.
+
+Come up with a real world example of a linked list.
+  A:
+  To me a real workd tangible example would be a train. If a person boarded a train at the first car, and wanted to 
+  meet their friend seated in the last car, they would have to travel through every car, past every seat to reach 
+  their friend.
+
+Programming Questions
+
+The linked list push function should take a value, create a node, and add it to the end of a list. 
+Below is pseudocode for a push function for a singly linked list. However, there is something wrong with it. 
+Submit both an explanation of the bug and a functional implementation of the method. 
+
+FUNCTION push(element)
+CREATE node
+SET node.value TO element
+SET node.next TO null
+
+IF the head node does not exist
+ THEN SET head to node
+ELSE
+ SET current to head
+ SET current.next to node
+END IF
+END FUNCTION
+
+  A:
+  I think the issue is within the ELSE statement. The function sets current to head, because it has 
+  to start there to traverse the list. But then current.next is set to node - so the code is essentially 
+  setting the next node after head to the new node. We want to add the new node to the end of the list
+  per the instructions, which currently this will not do. A WHILE loop could check that while current.next 
+  is not at the end of the list, SET current equal to current.next. 
+  This traverses the list to the last node in the list.
+
+  //Our constructor method, setting the head to null
+
+  function List() {
+    this.head = null;
+  }
+
+  List.prototype.push = function(element) {
+  
+    var newNode = {
+      data: element,
+      next: null
+    };
+
+    if (this.head === null {
+      this.head = newNode;
+      return;
+    }
+
+    var current = this.head;
+
+    //while the next node is not the end, traverse the list
+    while(current.next !== null){
+      current = current.next;
+    }
+    //when we reach the end of the list, assign the last node to point to our new node
+    current.next = newNode
+  }
+
+Given an unsorted singly linked list, remove all duplicates from the linked list.
+
+  // A:
+  
+  List.prototype.removeDuplicates = function() {
+  if (!this.head || !this.head.next) {
+    console.log("This is an empty list or there is only one element.")
+    return;
+  }
+  var n1;
+  var n2;
+  var n3;
+  var val;
+
+  n2 = this.head;
+  while (n2) {
+    val = n2.data;
+    n1 = n2;
+    n3 = n2.next;
+
+    while (n3) {
+      if (n3.data === val) {
+        n1.next = n3.next;
+      } else {
+        n1 = n3;
+      }
+      n3 = n3.next;
+    }
+  n2 = n2.next;
+  }
+}
+
+
+Given an unsorted singly linked list, reverse it.
+  // A:
+
+  List.prototype.reverseList = function () {
+    if (!this.head || !this.head.next) {
+      console.log("This is an empty list or there is only one element.")
+      return;
+    }
+
+    var n1 = null;
+    var n2 = this.head;
+    var n3;
+
+    while (n2) {
+      n3 = n2.next;
+      n2.next = n1;
+      n1 = n2;
+      n2 = n3;
+    }
+    this.head = n1;
+  }
