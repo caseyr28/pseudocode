@@ -15,10 +15,13 @@ What is the difference between a depth-first search and a breadth-first search?
   moving down to the next level, then repeating the compare.
 
 Explain in your own words what an undirected, a-cyclic, unweighted graph is.
-  A: An undirected graph contains edges that start nor end at a particular node.
-  An a-cyclic graph does not loop, it simply connects nodes and eventually dead-ends. An 
-  unweighted graph does not assign any special value to nodes to influence the graph or 
-  weigh the cost of travel between nodes.
+  A: An undirected, acylic, unweighted graph describes a data structure that has certain qualities.
+  These qualities can be represented in a Binary Search Tree. These qualities include: 
+  Undirected; which means direction is ambigous, similar 
+  to a handshake. 
+  Acylic; this means that the data nodes does not end at the start–following nodes leads
+  to a dead-end. 
+  Unweighted; which means there is no cost assigned to the travel between nodes. 
 
 What kind of graph is a binary search tree?
   A: An undirected graph.
@@ -188,8 +191,7 @@ class BinarySearchTree {
     let lowestCommon = this.findLca(root, n1, n2)
     let distanceToN1 = this.countAncestors(lowestCommon, n1)
     let distanceToN2 = this.countAncestors(lowestCommon, n2)
-    let distanceToRoot = this.countAncestors(root, lowestCommon)
-    let totalDistance = (distanceToN1 + distanceToN2) - (2 * distanceToRoot)
+    let totalDistance = (distanceToN1 + distanceToN2)
     return `The distance between ${n1} and ${n2} is ${totalDistance}`
   }
   
