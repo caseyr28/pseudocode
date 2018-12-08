@@ -16,11 +16,86 @@ Making coffee;
     END WHILE
     ADD groundBeans to coffeeMaker
     water PLUS coffeeMaker equals coffee
+    SHOW coffee
 
 
 
 Washing dishes;
+  A;
+    SET dish to dirty
+    SET rack to empty
+    SET water
+    SET soap
+    INIT sink to capacity
+
+    FUNCTION wash
+      IF dish equals dirty
+        GET dish
+        SET dish to clean
+        SHOW dish
+      END IF
+    END FUNCTION  
+
+    WHILE water does not equal sink capacity
+      INCREMENT water
+    END WHILE
+    ADD soap to sink
+    FOR each dish
+        add dish to sink
+        CALL wash
+        add dish to rack
+    END FOR
+
+
 A choice of your own.
-As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+  A: Cook breakfast;
+    SET egg to uncooked
+    SET stove to off
+    SET pan
+    SET butter
+    SET time to cooked egg
+    IF stove equals off
+      ADD butter to pan
+      ADD pan to stove
+      SET stove to one
+      CALL Making coffee      
+    END IF
+    IF egg equals uncooked 
+      ADD egg to pan for time
+    END IF
+    SHOW egg
+    SHOW coffee
+
+As with the knot algorithm, there may be more than one way to solve the problem. 
+It is essential to try to pick the best algorithm for a situation. 
+Name three companies who created an algorithm that made them successful, e.g., 
+Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). 
+Google's algorithm produces more relevant results than other search engines; 
+what about each of your cases make them stand out?
+  A;
+    1. LensCrafter's "Eyewear in about an hour" algorithym. LensCrafters perfected the proposition of fast eyewear products.
+    They solved the issue of recieving eyeware quickly to customers by creating this process–arguably better than 
+    previous eyeware processes.
+
+    2. Nest's smart home thermostat product is an example of a perfected algorythm. Nest created the
+    algorithym of tuning temperature control preferences of one's home by connecting those preferences
+    from the actual heating of the home to one's digital devices, in addition to "learning" optimal temperature
+    control effeciencies, which save the consumer money.
+
+    3. Digit's mobile saving algrithym is another example. Digit perfected the algorythm for consumers to save money 
+    by analyzing spending and saving habits, then adjusting daily savings amounts to optimize both savings as well as debt
+    for individuals. In addition Digit also takes advantage of our "always connected" world by optimizing communication
+    through mobile devices.
+    
 
 Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+  A;
+  I think an efficient algorithm has the following characteristics;
+   - clearly stated, meaning the functions it follows are understandable and have a clear purpose
+   - A clear roadmap to a result. Meaning, the steps taken are understandable in the sense of the final outcome or goal.
+   - Quality results, meaning the process followed yeilds results that are more or less predictable in the qualities desired.
+
+  Compare that to an inefficient algorithm, which I believe has the following characteristics;
+   - Over-complicated, meaning the process it takes to achieve the result is confusing and creates a lot of 'churn.'
+   - variable outcomes. Meaning, the process yeilds wildly varying results and unintended outcomes.
+   - Excessive time, meaning an inefficient algorithm takes an unacceptable amount of time to work through it's process to a result.
