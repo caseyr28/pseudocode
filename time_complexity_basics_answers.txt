@@ -1,0 +1,76 @@
+What is time complexity and what is its relation to algorithms?
+  A: 
+    Time complexity is the estimate of time for a function to execute. 
+    It's used to measure the efficiency of a given algorithm in relation to it's input.
+
+What is runtime?
+  A:
+    Runtime is a term used to describe both the physical time it takes an algorithym to execute, 
+    as well as the time complexity of that algorithm.
+
+How is the runtime of an algorithm calculated?
+  A: The runtime of an algorithm is calculated by adding up the instructions of the function in relation to the size
+  of it's input, dropping any constants.
+
+Name the six types of algorithm growth rates we saw in this checkpoint and list them in order of most efficient to least efficient. 
+Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+  A:
+    1. Constant growth rate
+    2. Logarithmic growth rate
+    3. Linear growth rate
+    4. Log-linear growth rate
+    5. Quadratic growth rate
+    6. Cubic Growth Rate // placed additional growth rate
+    7. Exponential growth rate
+
+Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+  A: Logarithmic growth rate  
+    A logarithmic growth rate can be compared to the idea of strength training. In the begining, a person
+    training will see significant gains. As they continue their exercise regimen however, they will eventually see
+    smaller and smaller gains as they platueau.
+
+Determine the time complexity of the following snippet of code. It is commonly known as a linear search.
+FUNCTION linearSearch(array, target)
+ FOR each number in the array
+   IF number = target THEN
+     RETURN true
+   END IF
+ END FOR
+ RETURN false
+END FUNCTION
+
+  A:  
+    0(n) Linear
+
+Determine the time complexity of the following snippet of code.
+FUNCTION foo(array)
+ FOR each number in the array
+   FOR each number in the array
+     print "Hello"
+   END FOR
+ END FOR
+END FUNCTION
+
+  A:
+    0(n^2) Quadratic
+
+Determine the time complexity of the following snippet of code. It is commonly known as the Fibonacci sequence.
+FUNCTION fibonacci(number)
+ IF number < 1 THEN
+   ERROR
+ ELSE IF number = 1 or 2 THEN
+   RETURN 1
+ ELSE
+   CALL fibonacci WITH number - 2 RETURNING twoBack
+   CALL fibonacci WITH number - 1 RETURNING oneBack
+   RETURN twoBack + oneBack
+ END IF
+END FUNCTION
+
+  A:
+    0(2^n) Exponential
+
+Out of the code snippets you just saw, which is the most time efficient?
+
+  A:
+    0(n) Linear
