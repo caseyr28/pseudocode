@@ -10,7 +10,7 @@ find the value G using linear search?
 
 Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find 
 the value G using binary search?
-  A: 4
+  A: 3
 
 Given an unsorted collection of a million items, which algorithm would you choose between linear search and 
 binary search? Explain your reasoning.
