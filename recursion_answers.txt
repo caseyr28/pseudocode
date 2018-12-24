@@ -23,7 +23,7 @@ Compare the recursive and iterative solutions to the three algorithms from the c
   A:
     All versions are similar in that they start with a base case, or cases to check if the algorithm should continue.
     They are also similar in that they then execute the specific logic to achieve the desired result. Within that though are the 
-    differnces. The recursive versions simply call themselves, passing in specific parameters. The iterative versions must 
+    differences. The recursive versions simply call themselves, passing in specific parameters. The iterative versions must 
     loop through the data, and store data in variables to check either during or after the loop process to complete the logic.
 
 Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, 
